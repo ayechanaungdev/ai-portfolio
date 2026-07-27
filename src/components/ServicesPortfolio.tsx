@@ -23,7 +23,7 @@ export default function ServicesPortfolio() {
   const copy = COPY[language];
 
   return (
-    <section id="projects" className="px-6 py-24">
+    <section id="projects" className="relative px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

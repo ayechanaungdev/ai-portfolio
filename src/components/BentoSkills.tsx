@@ -27,7 +27,7 @@ export default function BentoSkills() {
   const copy = COPY[language];
 
   return (
-    <section id="skills" className="px-6 py-24">
+    <section id="skills" className="relative px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

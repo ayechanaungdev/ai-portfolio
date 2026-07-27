@@ -10,8 +10,8 @@
       "jp": "Laravel、C#、モダンなJavaScriptで日本向けソフトウェアを開発するフルスタックエンジニア。"
     },
     "bio": {
-      "en": "Full-stack software engineer with Master's and Bachelor's degrees in Computer Science from the University of Computer Studies, Yangon (UCSY). Specializes in backend development using PHP (Laravel), C#, and Java, alongside modern JavaScript frameworks. Currently based in Yangon, Myanmar, building software for Japan-focused clients at GIC Myanmar.",
-      "jp": "ヤンゴンコンピュータ大学(UCSY)にてコンピュータサイエンスの修士号・学士号を取得したフルスタックソフトウェアエンジニア。PHP(Laravel)、C#、Javaによるバックエンド開発と、モダンなJavaScriptフレームワークを専門としています。現在はミャンマー・ヤンゴンを拠点に、GICミャンマーにて日本向けクライアント向けソフトウェア開発に従事しています。"
+      "en": "Full-stack software engineer with Master's and Bachelor's degrees in Computer Science from the University of Computer Studies, Yangon (UCSY). Currently Senior Software Engineer at GIC Myanmar, specializing in backend architecture (PHP/Laravel, C#, Java) and leading multi-brand e-commerce platforms for Japanese clients such as Forever21, Artidaoud, CSmart, and Greed. Passionate about ICT education and solving complex technical challenges through innovation and collaboration.",
+      "jp": "ヤンゴンコンピュータ大学(UCSY)にてコンピュータサイエンスの修士号・学士号を取得したフルスタックソフトウェアエンジニア。現在はGICミャンマーのシニアソフトウェアエンジニアとして、PHP(Laravel)、C#、Javaによるバックエンド開発を専門とし、Forever21、Artidaoud、CSmart、Greedなど日本のクライアント向けマルチブランドECプラットフォームの開発をリード。ICT教育への情熱とともに、革新と協働を通じて複雑な技術課題の解決に取り組んでいる。"
     },
     "location": {
       "en": "Yangon, Myanmar",
@@ -60,23 +60,24 @@
       "id": "gic-senior-software-engineer",
       "role": { "en": "Senior Software Engineer", "jp": "シニアソフトウェアエンジニア" },
       "company": { "en": "GIC Myanmar Co., Ltd", "jp": "GICミャンマー株式会社" },
+      "companyUrl": "https://gicjp.com/english",
       "location": { "en": "Yangon, Myanmar", "jp": "ミャンマー、ヤンゴン" },
       "startDate": "2025-11-01",
       "endDate": null,
-      "description": {
-        "en": "Leading development of Japan-focused software projects, adopting emerging technologies, and mentoring team members.",
-        "jp": "日本向けソフトウェアプロジェクトの開発をリードし、新技術の導入とチームメンバーの育成を担当。"
+      "summary": {
+        "en": "Leading development of Japan-focused software projects, adopting emerging technologies, and mentoring team members to build sustainable technical capability.",
+        "jp": "日本向けソフトウェアプロジェクトの開発をリードし、新技術を積極的に導入するとともに、チームメンバーの育成を通じて持続可能な技術基盤の構築を担当。"
       },
       "responsibilities": {
         "en": [
-          "Developing Japan-based software projects end-to-end",
-          "Evaluating and implementing emerging technologies",
-          "Mentoring and supporting team members"
+          "Project Development: Developing and maintaining diverse Japan-based software projects with a focus on reliability and performance",
+          "Technology Growth: Actively acquiring and implementing emerging technologies to enhance project capabilities and system performance",
+          "Team & Knowledge: Mentoring team members and establishing technical frameworks for sustainable technology growth and knowledge sharing"
         ],
         "jp": [
-          "日本向けソフトウェアプロジェクトの一貫した開発",
-          "新技術の評価と導入",
-          "チームメンバーの育成とサポート"
+          "プロジェクト開発:信頼性とパフォーマンスを重視し、多様な日本向けソフトウェアプロジェクトを開発・保守",
+          "技術力向上:新技術を積極的に習得・導入し、プロジェクトの能力とシステム性能を向上",
+          "チームと知識共有:チームメンバーを育成し、持続可能な技術成長と知識共有のための技術フレームワークを構築"
         ]
       },
       "technologies": ["PHP", "Laravel", "JavaScript", "C#"]
@@ -85,75 +86,76 @@
       "id": "fignny-php-developer",
       "role": { "en": "PHP Developer", "jp": "PHP開発者" },
       "company": { "en": "Fignny Co., Ltd (Japan)", "jp": "Fignny株式会社(日本)" },
+      "companyUrl": "https://www.fignny.co.jp/en/",
       "location": { "en": "Yangon, Myanmar", "jp": "ミャンマー、ヤンゴン" },
       "startDate": "2024-04-01",
       "endDate": "2025-10-31",
-      "description": {
-        "en": "Built and maintained multi-brand e-commerce platforms for Japanese retail clients, covering the full project lifecycle.",
-        "jp": "日本の小売クライアント向けにマルチブランドECプラットフォームを構築・保守し、プロジェクトの全工程を担当。"
+      "summary": {
+        "en": "Developed a multi-brand e-commerce platform for Forever21, Artidaoud, CSmart, Greed and others on a unified PHP framework, managing the full project lifecycle from requirements analysis through deployment.",
+        "jp": "Forever21、Artidaoud、CSmart、Greedなど複数ブランド向けのECプラットフォームを統一PHPフレームワーク上で開発。要件定義から設計・開発・テスト・リリースまでプロジェクト全工程を管理。"
       },
       "responsibilities": {
         "en": [
-          "Delivered multi-brand e-commerce platforms (Forever21, Artidaoud, CSmart, Greed)",
-          "Managed full project lifecycle from requirements to deployment",
-          "Built frontend storefronts and admin CMS interfaces",
-          "Designed multi-tenancy architecture shared across brands"
+          "Frontend: Built product browsing, ordering, order tracking, and member account management interfaces with category-specific product catalogs",
+          "Admin CMS: Developed order/member management, promotion configuration, and content management panels for autonomous brand operations",
+          "Architecture: Implemented a single codebase with multi-tenancy architecture, brand-specific customizations, and a scalable system for simultaneous brand operations"
         ],
         "jp": [
-          "マルチブランドECプラットフォーム(Forever21、Artidaoud、CSmart、Greed)を開発",
-          "要件定義からリリースまでプロジェクト全工程を管理",
-          "フロントエンドの店舗画面と管理者向けCMSを構築",
-          "複数ブランドで共有するマルチテナントアーキテクチャを設計"
+          "フロントエンド:商品閲覧・注文・注文追跡・会員アカウント管理画面をブランド別商品カタログとともに構築",
+          "管理者用CMS:各ブランドが自律的に運営できるよう、注文・会員管理、プロモーション設定、コンテンツ管理パネルを開発",
+          "アーキテクチャ:単一コードベースによるマルチテナントアーキテクチャとブランド別カスタマイズを実装し、複数ブランド同時運用に対応するスケーラブルなシステムを構築"
         ]
       },
       "technologies": ["PHP", "Laravel", "JavaScript", "MySQL"]
     },
     {
       "id": "gic-programmer-web-developer",
-      "role": { "en": "Programmer / Web Developer", "jp": "プログラマー / Web開発者" },
+      "role": { "en": "Programmer", "jp": "プログラマー" },
       "company": { "en": "GIC Myanmar Co., Ltd", "jp": "GICミャンマー株式会社" },
+      "companyUrl": "https://gicjp.com/english",
       "location": { "en": "Yangon, Myanmar", "jp": "ミャンマー、ヤンゴン" },
       "startDate": "2022-01-01",
       "endDate": "2024-05-31",
-      "description": {
-        "en": "Developed insurance and product management systems for Japanese clients using C# and PHP (Laravel).",
-        "jp": "C#とPHP(Laravel)を用いて、日本のクライアント向け保険・製品管理システムを開発。"
+      "summary": {
+        "en": "Led dynamic development solutions across diverse projects using C# and PHP (Laravel), including insurance and product management systems for Japanese clients.",
+        "jp": "C#とPHP(Laravel)を用いて多様なプロジェクトの開発をリード。日本のクライアント向け保険・製品管理システムの開発を主導。"
       },
       "responsibilities": {
         "en": [
-          "Built insurance management modules for Japanese clients",
-          "Developed product management features using C#",
-          "Implemented backend services with PHP (Laravel)"
+          "Led insurance management projects for Japanese clients",
+          "Led product management projects for Japanese clients",
+          "Built solutions using C# and PHP (Laravel) tailored to client-specific requirements"
         ],
         "jp": [
-          "日本のクライアント向け保険管理モジュールの開発",
-          "C#を用いた製品管理機能の開発",
-          "PHP(Laravel)によるバックエンドサービスの実装"
+          "日本のクライアント向け保険管理プロジェクトをリード",
+          "日本のクライアント向け製品管理プロジェクトをリード",
+          "C#とPHP(Laravel)を用いてクライアント固有の要件に対応したソリューションを構築"
         ]
       },
       "technologies": ["C#", "PHP", "Laravel"]
     },
     {
-      "id": "moe-multimedia-ict-teacher",
-      "role": { "en": "Multimedia / ICT Teacher", "jp": "マルチメディア / ICT教師" },
+      "id": "moe-multimedia-teacher",
+      "role": { "en": "Multimedia Teacher", "jp": "マルチメディア教師" },
       "company": { "en": "Ministry of Education, Myanmar", "jp": "ミャンマー教育省" },
+      "companyUrl": "https://www.moe.gov.mm/",
       "location": { "en": "Myanmar", "jp": "ミャンマー" },
       "startDate": "2019-11-01",
       "endDate": "2021-03-31",
-      "description": {
-        "en": "Taught digital literacy and integrated technology into classroom instruction.",
-        "jp": "デジタルリテラシー教育を担当し、授業に技術を統合。"
+      "summary": {
+        "en": "Focused on integrating technology into education — crafting enriched lesson plans, developing teaching aids, and guiding students in ICT use to foster digital literacy.",
+        "jp": "教育への技術統合に注力し、充実した授業計画の作成、教材の開発、生徒へのICT活用指導を通じてデジタルリテラシーを育成。"
       },
       "responsibilities": {
         "en": [
-          "Integrated technology into lesson planning",
-          "Taught digital literacy and ICT skills",
-          "Developed IT-based teaching aids"
+          "Implementing technology in lesson plans",
+          "Creating teaching aids using IT",
+          "Teaching children the correct use of ICT"
         ],
         "jp": [
-          "授業計画への技術統合",
-          "デジタルリテラシーとICTスキルの指導",
-          "IT教材の開発"
+          "授業計画への技術導入",
+          "ITを活用した教材の作成",
+          "児童生徒への正しいICT活用の指導"
         ]
       },
       "technologies": []
@@ -164,36 +166,61 @@
       "id": "yu-masters-computer-science",
       "degree": { "en": "Master's Degree in Computer Science", "jp": "コンピュータサイエンス修士号" },
       "institution": { "en": "University of Yangon (YU)", "jp": "ヤンゴン大学(YU)" },
+      "institutionUrl": "https://www.uy.edu.mm/",
       "location": { "en": "Yangon, Myanmar", "jp": "ミャンマー、ヤンゴン" },
-      "startDate": "2024-01-01",
-      "endDate": "2026-02-28",
-      "description": {
-        "en": "Coursework in Advanced Computer Science, Computer Systems, Software Engineering, Computational Mathematics, Database Management, and Network Technology. (Expected Feb 2026)",
-        "jp": "高度なコンピュータサイエンス、コンピュータシステム、ソフトウェア工学、計算数学、データベース管理、ネットワーク技術を履修。(2026年2月修了予定)"
+      "date": "2026-02-01",
+      "details": {
+        "en": [
+          "Advanced Computer Science",
+          "Computer System",
+          "Software Engineering",
+          "Computational Mathematics",
+          "Database Management System",
+          "Network Technology"
+        ],
+        "jp": [
+          "高度なコンピュータサイエンス",
+          "コンピュータシステム",
+          "ソフトウェア工学",
+          "計算数学",
+          "データベース管理システム",
+          "ネットワーク技術"
+        ]
       }
     },
     {
       "id": "yuoe-postgrad-diploma-multimedia-arts",
-      "degree": { "en": "Post Graduate Diploma in Multimedia Arts", "jp": "マルチメディアアーツ大学院ディプロマ" },
+      "degree": {
+        "en": "Post Graduate Diploma in Multimedia Arts (Educational Technology)",
+        "jp": "マルチメディアアーツ大学院ディプロマ(教育工学)"
+      },
       "institution": { "en": "Yangon University of Education (YUOE)", "jp": "ヤンゴン教育大学(YUOE)" },
+      "institutionUrl": "https://www.yuoe.edu.mm/",
       "location": { "en": "Yangon, Myanmar", "jp": "ミャンマー、ヤンゴン" },
-      "startDate": "2019-01-01",
-      "endDate": "2019-12-31",
-      "description": {
-        "en": "Focus on educational technology, creative teaching methodologies, and IT-based teaching aids.",
-        "jp": "教育工学、創造的な指導方法、IT教材の活用に重点を置いた課程。"
+      "date": "2019-01-01",
+      "details": {
+        "en": [
+          "Applying Information Technology in Education",
+          "Developing Creative Teaching Methodologies with the aspects of Technology",
+          "Creating Teaching Aids with Information Technology"
+        ],
+        "jp": [
+          "情報技術の教育への応用",
+          "技術の観点を取り入れた創造的な指導方法の開発",
+          "情報技術を用いた教材の作成"
+        ]
       }
     },
     {
       "id": "ucsy-bachelors-computer-science",
       "degree": { "en": "Bachelor's Degree in Computer Science", "jp": "コンピュータサイエンス学士号" },
       "institution": { "en": "University of Computer Studies, Yangon (UCSY)", "jp": "ヤンゴンコンピュータ大学(UCSY)" },
+      "institutionUrl": "https://www.ucsy.edu.mm/",
       "location": { "en": "Yangon, Myanmar", "jp": "ミャンマー、ヤンゴン" },
-      "startDate": "2014-01-01",
-      "endDate": "2018-12-31",
-      "description": {
-        "en": "Specialization in Web Development and Software Engineering.",
-        "jp": "Web開発とソフトウェア工学を専攻。"
+      "date": "2018-02-01",
+      "details": {
+        "en": ["Computer Science", "Web Development", "Software Engineering"],
+        "jp": ["コンピュータサイエンス", "Web開発", "ソフトウェア工学"]
       }
     }
   ],
@@ -203,7 +230,7 @@
       "title": { "en": "Coding Languages", "jp": "プログラミング言語" },
       "skills": [
         { "name": "HTML + CSS", "level": 100 },
-        { "name": "Python", "level": 90 },
+        { "name": "Java", "level": 90 },
         { "name": "JavaScript", "level": 86 },
         { "name": "PHP", "level": 80 }
       ]
@@ -213,8 +240,7 @@
       "title": { "en": "Frameworks & Technologies", "jp": "フレームワーク・技術" },
       "skills": [
         { "name": "Laravel", "level": 88 },
-        { "name": "C#", "level": 78 },
-        { "name": "Java", "level": 72 }
+        { "name": "C#", "level": 78 }
       ]
     },
     {

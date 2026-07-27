@@ -61,12 +61,12 @@ const EN_MONTHS = [
   "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
 ];
 
-/** Formats an ISO 8601 date (YYYY-MM-DD) as a localized "Month Year" string, e.g. "Nov 2025" / "2025年11月". */
+/** Formats an ISO 8601 date (YYYY-MM-DD) as a localized "Year Month" string, e.g. "2025 Nov" / "2025年11月". */
 export function formatMonthYear(dateString: string, lang: "en" | "jp" = "en"): string {
   const date = new Date(dateString);
   const year = date.getFullYear();
   const month = date.getMonth();
-  return lang === "jp" ? `${year}年${month + 1}月` : `${EN_MONTHS[month]} ${year}`;
+  return lang === "jp" ? `${year}年${month + 1}月` : `${year} ${EN_MONTHS[month]}`;
 }
 
 /** Formats a start/end ISO date pair as a localized range, e.g. "Nov 2025 – Present" / "2025年11月 – 現在". */

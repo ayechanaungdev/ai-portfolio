@@ -41,10 +41,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-24">
-      <div className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-accent/30 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-accent-2/30 blur-3xl" />
-
+    <section id="home" className="relative flex min-h-screen items-center pt-24">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

@@ -41,12 +41,14 @@ export interface WorkExperience {
   id: string;
   role: LocalizedString;
   company: LocalizedString;
+  companyUrl?: string;
   location: LocalizedString;
   /** ISO 8601 date (YYYY-MM-DD). */
   startDate: string;
   /** ISO 8601 date (YYYY-MM-DD), or null if this is the current position. */
   endDate: string | null;
-  description: LocalizedString;
+  /** Short one-sentence summary, used for the compact CV PDF (the site shows the fuller `responsibilities` instead). */
+  summary: LocalizedString;
   responsibilities: LocalizedStringList;
   technologies: string[];
 }
@@ -55,12 +57,11 @@ export interface Education {
   id: string;
   degree: LocalizedString;
   institution: LocalizedString;
+  institutionUrl?: string;
   location: LocalizedString;
-  /** ISO 8601 date (YYYY-MM-DD). */
-  startDate: string;
-  /** ISO 8601 date (YYYY-MM-DD), or null if currently in progress / expected. */
-  endDate: string | null;
-  description: LocalizedString;
+  /** ISO 8601 date (YYYY-MM-DD, day unused) of graduation or expected completion. */
+  date: string;
+  details: LocalizedStringList;
 }
 
 export interface SkillItem {

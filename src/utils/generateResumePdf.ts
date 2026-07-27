@@ -1,6 +1,6 @@
 import { jsPDF } from "jspdf";
 import heroPhotoBase64 from "../assets/hero.jpg?inline";
-import { calculateDuration, formatDateRange } from "./dateHelpers";
+import { calculateDuration, formatDateRange, formatMonthYear } from "./dateHelpers";
 import type { Language } from "../context/LanguageContext";
 import type { PortfolioData, SkillItem } from "../types/portfolio";
 
@@ -80,6 +80,18 @@ export async function generateResumePdf(data: PortfolioData, language: Language)
     }
   };
 
+  const paragraphLineHeight = language === "jp" ? 17 : 14;
+
+  const renderParagraph = (text: string) => {
+    doc.setFont(fontName, "normal");
+    doc.setFontSize(10);
+    setColor(TEXT);
+    const lines = doc.splitTextToSize(text, pageWidth - marginX * 2);
+    ensureSpace(lines.length * paragraphLineHeight);
+    doc.text(lines, marginX, y, { lineHeightFactor: paragraphLineHeight / 10 });
+    y += lines.length * paragraphLineHeight;
+  };
+
   const sectionHeading = (label: string) => {
     ensureSpace(40);
     doc.setFont(fontName, "bold");
@@ -131,8 +143,8 @@ export async function generateResumePdf(data: PortfolioData, language: Language)
   doc.setFontSize(10.5);
   setColor(TEXT);
   const bioLines = doc.splitTextToSize(data.profile.bio[language], pageWidth - marginX * 2);
-  doc.text(bioLines, marginX, y);
-  y += bioLines.length * 13 + 16;
+  doc.text(bioLines, marginX, y, { lineHeightFactor: paragraphLineHeight / 10 });
+  y += bioLines.length * paragraphLineHeight + 16;
 
   // Work experience
   sectionHeading(copy.experience);
@@ -158,9 +170,8 @@ export async function generateResumePdf(data: PortfolioData, language: Language)
     doc.text(`${job.company[language]} — ${job.location[language]}`, marginX, y);
     y += 14;
 
-    const descLines = doc.splitTextToSize(job.description[language], pageWidth - marginX * 2);
-    doc.text(descLines, marginX, y);
-    y += descLines.length * 12 + 14;
+    renderParagraph(job.summary[language]);
+    y += 10;
   }
 
   // Education
@@ -175,16 +186,17 @@ export async function generateResumePdf(data: PortfolioData, language: Language)
     doc.setFont(fontName, "normal");
     doc.setFontSize(9.5);
     setColor(ACCENT_2);
-    doc.text(formatDateRange(edu.startDate, edu.endDate, language), pageWidth - marginX, y, {
-      align: "right",
-    });
+    doc.text(formatMonthYear(edu.date, language), pageWidth - marginX, y, { align: "right" });
     y += 14;
 
     doc.setFont(fontName, "normal");
     doc.setFontSize(10);
     setColor(TEXT);
     doc.text(`${edu.institution[language]} — ${edu.location[language]}`, marginX, y);
-    y += 18;
+    y += 14;
+
+    renderParagraph(edu.details[language].join(", "));
+    y += 10;
   }
 
   // Skills

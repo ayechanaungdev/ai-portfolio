@@ -52,7 +52,7 @@ export default function AboutStats() {
   const [start, setStart] = useState(false);
 
   return (
-    <section id="about" className="px-6 py-24">
+    <section id="about" className="relative px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 24 }}

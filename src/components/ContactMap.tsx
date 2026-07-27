@@ -85,13 +85,13 @@ export default function ContactMap() {
   };
 
   return (
-    <section id="contact" className="px-6 py-24">
+    <section id="contact" className="relative px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-3xl font-bold text-text-h">{copy.title}</h2>
         <p className="mt-2 text-text">{copy.subtitle}</p>
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div className="h-full min-h-[320px] overflow-hidden rounded-3xl border border-border">
+          <div className="h-full min-h-[320px] overflow-hidden rounded-3xl border border-border dark:brightness-125 dark:contrast-75">
             <MapContainer
               center={YANGON}
               zoom={12}

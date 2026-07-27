@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage, type Language } from "../context/LanguageContext";
 import portfolioData from "../data/portfolioData.json";
 import type { PortfolioData } from "../types/portfolio";
 
@@ -15,13 +15,49 @@ const NAV_LINKS = [
   { href: "#contact", label: { en: "Contact", jp: "お問い合わせ" } },
 ];
 
+function LanguageToggleLabel({ language }: { language: Language }) {
+  return (
+    <>
+      <span className={language === "en" ? "text-accent" : ""}>EN</span>
+      <span className="mx-0.5">/</span>
+      <span className={language === "jp" ? "text-accent" : ""}>JP</span>
+    </>
+  );
+}
+
+function useActiveSection(): string {
+  const [activeId, setActiveId] = useState("");
+
+  useEffect(() => {
+    const sections = NAV_LINKS.map((link) => document.querySelector(link.href)).filter(
+      (el): el is Element => el !== null,
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting);
+        if (visible.length > 0) {
+          setActiveId(`#${visible[0].target.id}`);
+        }
+      },
+      { rootMargin: "-45% 0px -50% 0px" },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  return activeId;
+}
+
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const { language, toggleLanguage } = useLanguage();
   const [open, setOpen] = useState(false);
+  const activeSection = useActiveSection();
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/80 bg-bg/70 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-[1100] border-b border-border/80 bg-bg/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="#home"
@@ -35,7 +71,9 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-text transition-colors hover:text-text-h"
+              className={`text-sm transition-colors hover:text-text-h ${
+                activeSection === link.href ? "font-bold text-accent" : "font-medium text-text"
+              }`}
             >
               {link.label[language]}
             </a>
@@ -47,9 +85,9 @@ export default function Navbar() {
             type="button"
             onClick={toggleLanguage}
             aria-label="Toggle language"
-            className="rounded-full border border-border px-3 py-1.5 text-xs font-semibold text-text transition-colors hover:border-accent hover:text-accent"
+            className="rounded-full border border-border px-3 py-1.5 text-xs font-semibold text-text transition-colors hover:border-accent"
           >
-            {language === "en" ? "EN / JP" : "JP / EN"}
+            <LanguageToggleLabel language={language} />
           </button>
           <button
             type="button"
@@ -78,7 +116,9 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-sm font-medium text-text hover:text-text-h"
+              className={`text-sm hover:text-text-h ${
+                activeSection === link.href ? "font-bold text-accent" : "font-medium text-text"
+              }`}
             >
               {link.label[language]}
             </a>
@@ -89,7 +129,7 @@ export default function Navbar() {
               onClick={toggleLanguage}
               className="rounded-full border border-border px-3 py-1.5 text-xs font-semibold text-text"
             >
-              {language === "en" ? "EN / JP" : "JP / EN"}
+              <LanguageToggleLabel language={language} />
             </button>
             <button
               type="button"
